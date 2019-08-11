@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SB is
+	port (
+		bi : in std_logic;
+		bo	: out std_logic
+	);
+end SB;
+
+architecture ckt of SB is
+begin
+end ckt;

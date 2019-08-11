@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SequenceDetector is
+	port (
+		KEY0, KEY1, KEY2, KEY3, SW : in std_logic;
+		LEDR, e2, e1, e0 : out std_logic
+	);
+end SequenceDetector;
+
+architecture ckt of SequenceDetector is
+begin
+end ckt;

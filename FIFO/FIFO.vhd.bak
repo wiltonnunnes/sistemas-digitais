@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FIFO is
+	port (
+		CLOCK_27 : in std_logic;
+		HEX0 : out std_logic_vector(6 downto 0)
+	);
+end FIFO;
+
+architecture ckt of FIFO is
+begin
+end ckt;

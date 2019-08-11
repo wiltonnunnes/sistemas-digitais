@@ -1,0 +1,164 @@
+|SequenceDetector
+CLOCK_27 => CLK_Div:g5.clk_in
+KEY0 => sbutton:g1.bi
+KEY1 => sbutton:g2.bi
+KEY2 => sbutton:g3.bi
+KEY3 => sbutton:g4.bi
+SW => mde_b:g7.S
+LEDR[0] <= mde_b:g7.L
+LEDR[1] <= CLK_Div:g5.clk_out
+HEX0[0] <= bcd_7segment:g6.output[0]
+HEX0[1] <= bcd_7segment:g6.output[1]
+HEX0[2] <= bcd_7segment:g6.output[2]
+HEX0[3] <= bcd_7segment:g6.output[3]
+HEX0[4] <= bcd_7segment:g6.output[4]
+HEX0[5] <= bcd_7segment:g6.output[5]
+HEX0[6] <= bcd_7segment:g6.output[6]
+
+
+|SequenceDetector|sbutton:g1
+clock => y_present~1.DATAIN
+bi => y_next.a.IN0
+bi => y_next.b.DATAB
+bi => Selector0.IN1
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|sbutton:g2
+clock => y_present~1.DATAIN
+bi => y_next.a.IN0
+bi => y_next.b.DATAB
+bi => Selector0.IN1
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|sbutton:g3
+clock => y_present~1.DATAIN
+bi => y_next.a.IN0
+bi => y_next.b.DATAB
+bi => Selector0.IN1
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|sbutton:g4
+clock => y_present~1.DATAIN
+bi => y_next.a.IN0
+bi => y_next.b.DATAB
+bi => Selector0.IN1
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|CLK_Div:g5
+clk_in => ax.CLK
+clk_in => cnt[0].CLK
+clk_in => cnt[1].CLK
+clk_in => cnt[2].CLK
+clk_in => cnt[3].CLK
+clk_in => cnt[4].CLK
+clk_in => cnt[5].CLK
+clk_in => cnt[6].CLK
+clk_in => cnt[7].CLK
+clk_in => cnt[8].CLK
+clk_in => cnt[9].CLK
+clk_in => cnt[10].CLK
+clk_in => cnt[11].CLK
+clk_in => cnt[12].CLK
+clk_in => cnt[13].CLK
+clk_in => cnt[14].CLK
+clk_in => cnt[15].CLK
+clk_in => cnt[16].CLK
+clk_in => cnt[17].CLK
+clk_in => cnt[18].CLK
+clk_in => cnt[19].CLK
+clk_in => cnt[20].CLK
+clk_in => cnt[21].CLK
+clk_in => cnt[22].CLK
+clk_in => cnt[23].CLK
+clk_out <= ax.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|bcd_7segment:g6
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN0
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[0] => output.IN1
+bcd[1] => output.IN1
+bcd[1] => output.IN1
+bcd[1] => output.IN0
+bcd[1] => output.IN0
+bcd[1] => output.IN1
+bcd[1] => output.IN1
+bcd[1] => output.IN0
+bcd[1] => output.IN1
+bcd[1] => output.IN1
+bcd[1] => output.IN0
+bcd[1] => output.IN1
+bcd[2] => output.IN0
+bcd[2] => output.IN0
+bcd[2] => output.IN1
+bcd[2] => output.IN0
+bcd[2] => output.IN1
+bcd[2] => output.IN0
+bcd[3] => output.IN1
+bcd[3] => output.IN1
+bcd[3] => output.IN1
+bcd[3] => output.IN1
+bcd[3] => output.IN1
+bcd[3] => output.IN1
+bcd[3] => output.IN1
+output[0] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SequenceDetector|mde_b:g7
+clk => y_present~1.DATAIN
+K0 => E1.IN0
+K0 => E2.IN0
+K0 => y_next.DATAA
+K0 => y_next.DATAA
+K1 => E0.IN0
+K1 => E2.IN1
+K1 => y_next.DATAA
+K1 => y_next.DATAA
+K2 => E0.IN1
+K2 => E1.IN1
+K2 => y_next.DATAA
+K2 => y_next.DATAA
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => y_next.OUTPUTSELECT
+K3 => Selector1.IN4
+K3 => Selector0.IN2
+S => y_next.start_state.DATAB
+S => Selector6.IN2
+L <= L.DB_MAX_OUTPUT_PORT_TYPE
+curr_state[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+curr_state[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+curr_state[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+curr_state[3] <= <GND>
+
+

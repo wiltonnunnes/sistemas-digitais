@@ -1,0 +1,35 @@
+
+State Machine - |SequenceDetector|mde_b:g7|y_present
+Name y_present.end_state y_present.dig5 y_present.dig4 y_present.dig3 y_present.dig2 y_present.dig1 y_present.wait_state y_present.start_state 
+y_present.start_state 0 0 0 0 0 0 0 0 
+y_present.wait_state 0 0 0 0 0 0 1 1 
+y_present.dig1 0 0 0 0 0 1 0 1 
+y_present.dig2 0 0 0 0 1 0 0 1 
+y_present.dig3 0 0 0 1 0 0 0 1 
+y_present.dig4 0 0 1 0 0 0 0 1 
+y_present.dig5 0 1 0 0 0 0 0 1 
+y_present.end_state 1 0 0 0 0 0 0 1 
+
+State Machine - |SequenceDetector|sbutton:g4|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |SequenceDetector|sbutton:g3|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |SequenceDetector|sbutton:g2|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |SequenceDetector|sbutton:g1|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
