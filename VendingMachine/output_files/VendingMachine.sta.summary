@@ -1,0 +1,69 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLK_Div:g1|ax'
+Slack : -5.184
+TNS   : -51.376
+
+Type  : Slow Model Setup 'CLOCK_27'
+Slack : -2.691
+TNS   : -42.898
+
+Type  : Slow Model Hold 'CLOCK_27'
+Slack : -2.510
+TNS   : -2.510
+
+Type  : Slow Model Hold 'CLK_Div:g1|ax'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'CLK_Div:g1|ax'
+Slack : -0.264
+TNS   : -2.640
+
+Type  : Slow Model Removal 'CLK_Div:g1|ax'
+Slack : 1.034
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK_Div:g1|ax'
+Slack : -1.423
+TNS   : -31.384
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_27'
+Slack : -1.380
+TNS   : -26.380
+
+Type  : Fast Model Setup 'CLK_Div:g1|ax'
+Slack : -2.346
+TNS   : -21.421
+
+Type  : Fast Model Setup 'CLOCK_27'
+Slack : -0.765
+TNS   : -7.873
+
+Type  : Fast Model Hold 'CLOCK_27'
+Slack : -1.554
+TNS   : -1.554
+
+Type  : Fast Model Hold 'CLK_Div:g1|ax'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'CLK_Div:g1|ax'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CLK_Div:g1|ax'
+Slack : 0.582
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK_Div:g1|ax'
+Slack : -1.423
+TNS   : -31.384
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_27'
+Slack : -1.380
+TNS   : -26.380
+
+------------------------------------------------------------

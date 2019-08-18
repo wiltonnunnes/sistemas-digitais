@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all;
 entity sbutton is
 	port ( 
 		clock, bi: in std_logic ;
-		bo : out std_logic );
+		bo : out std_logic 
+	);
 end sbutton;
 
 architecture ckt of sbutton is

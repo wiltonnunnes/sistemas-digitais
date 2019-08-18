@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity adder10 is
 	port (
-		a9, a8, a7, a6, a5, a4, a3, a2, a1, a0, b9, b8, b7, b6, b5, b4, b3, b2, b1, b0 : in std_logic;
-		s9, s8, s7, s6, s5, s4, s3, s2, s1, s0 : in std_logic
+		x1, x2 : in std_logic_vector(9 downto 0);
+		y : out std_logic_vector(9 downto 0)
 	);
 end adder10;
 
@@ -27,14 +27,14 @@ architecture ckt of adder10 is
 	end component;
 	
 begin
-	g1 : half_adder port map (a0, b0, wires(0), s0);
-	g2 : full_adder port map (a1, b1, wires(0), s1, wires(1));
-	g3 : full_adder port map (a2, b2, wires(1), s2, wires(2));
-	g4 : full_adder port map (a3, b3, wires(2), s3, wires(3));
-	g5 : full_adder port map (a4, b4, wires(3), s4, wires(4));
-	g6 : full_adder port map (a5, b5, wires(4), s5, wires(5));
-	g7 : full_adder port map (a6, b6, wires(5), s6, wires(6));
-	g8 : full_adder port map (a7, b7, wires(6), s7, wires(7));
-	g9 : full_adder port map (a8, b8, wires(7), s8, wires(8));
-	g10 : full_adder port map (a9, b9, wires(8), s9, wires(9));
+	g1 : half_adder port map (x1(0), x2(0), wires(0), y(0));
+	g2 : full_adder port map (x1(1), x2(1), wires(0), y(1), wires(1));
+	g3 : full_adder port map (x1(2), x2(2), wires(1), y(2), wires(2));
+	g4 : full_adder port map (x1(3), x2(3), wires(2), y(3), wires(3));
+	g5 : full_adder port map (x1(4), x2(4), wires(3), y(4), wires(4));
+	g6 : full_adder port map (x1(5), x2(5), wires(4), y(5), wires(5));
+	g7 : full_adder port map (x1(6), x2(6), wires(5), y(6), wires(6));
+	g8 : full_adder port map (x1(7), x2(7), wires(6), y(7), wires(7));
+	g9 : full_adder port map (x1(8), x2(8), wires(7), y(8), wires(8));
+	g10 : full_adder port map (x1(9), x2(9), wires(8), y(9), open);
 end ckt;

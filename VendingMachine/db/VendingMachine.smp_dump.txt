@@ -1,0 +1,13 @@
+
+State Machine - |VendingMachine|mde_b:g10|y_present
+Name y_present.Fornecer y_present.Somar y_present.Esperar y_present.Inicio 
+y_present.Inicio 0 0 0 0 
+y_present.Esperar 0 0 1 1 
+y_present.Somar 0 1 0 1 
+y_present.Fornecer 1 0 0 1 
+
+State Machine - |VendingMachine|sbutton:g2|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 

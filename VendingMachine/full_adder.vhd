@@ -11,5 +11,5 @@ end full_adder;
 architecture ckt of full_adder is
 begin
 	co <= (b and ci) or (a and ci) or (a and b);
-	s <= a xor b xor c;
+	s <= a xor b xor ci;
 end ckt;
