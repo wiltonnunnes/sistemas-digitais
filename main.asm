@@ -1,12 +1,26 @@
 JMP main
-value:	
-	DB 	119
+dividend: 
+	DB	20
+divisor: 
+	DB 	4
+
 
 main:
-	MOV	A, [value]
-	MOV	B, 0
+	MOV	A, [dividend]
+	MOV	B, [divisor]
+	CALL	div
+	HLT
+
+div:
+	PUSH	C
+	MOV	C, 0
 
 loop:
-	SUB	A, 100
-	INC	B
-	HLT
+	SUB	A, B
+	JC	done
+	INC	C
+	JMP	loop
+
+done:
+	RET	
+	
